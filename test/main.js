@@ -8,7 +8,7 @@ describe("main", function () {
       assert.equal(value, true);
     });
     it("should return false for a non-prime number", function () {
-      const value = main.isPrime(97);
+      const value = main.isPrime(99);
       assert.equal(value, false);
     });
   });
