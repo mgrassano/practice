@@ -1,0 +1,25 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "```\r npm install -g yarn\r yarn\r ```",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgrassano/practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgrassano/practice/issues"
+  },
+  "homepage": "https://github.com/mgrassano/practice#readme",
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  }
+}
