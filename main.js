@@ -36,25 +36,22 @@ function maxProfit(prices) {
   let buyPrice = 0;
   let sellPrice = 0;
   for (let i = 0; i < prices.length; i++) {
-for(let j = 0; j < i; j++)
-  
-
-
-    // if (buyPrice > prices[i]) {
-    //   buyPrice = prices[i];
-    //   prices[i] = 0;
-    // } else {
-    //   profit = Math.max(prices[i] - buyPrice, profit);
-    // }
-    for (let i = 0; i < prices.length; i++) {
-      if (sellPrice < prices[i]) {
-        sellPrice = prices[i];
-        prices[i] = 0;
-      } else {
-        profit = Math.max(prices[i] - sellPrice, profit);
-      }
+    for (let j = 0; j < i.length; j++)
+      //   // if (buyPrice > prices[i]) {
+      //   //   buyPrice = prices[i];
+      //   //   prices[i] = 0;
+      //   // } else {
+      //   //   profit = Math.max(prices[i] - buyPrice, profit);
+      //   // }
+      //   for (let i = 0; i < prices.length; i++) {
+      //     if (sellPrice < prices[i]) {
+      //       sellPrice = prices[i];
+      //       prices[i] = 0;
+      //     } else {
+      //       profit = Math.max(prices[i] - sellPrice, profit);
+      //     }
+      // }
+      return true;
   }
-  return true;
 }
-
 exports.maxProfit = maxProfit;
