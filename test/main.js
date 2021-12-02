@@ -1,3 +1,4 @@
+/*
 var assert = require("assert");
 var main = require("../main");
 
@@ -22,6 +23,21 @@ describe("main", function () {
           67, 71, 73, 79, 83, 89, 97,
         ]
       );
+    });
+  });
+});
+*/
+
+var assert = require("assert");
+var main = require("../main");
+
+describe("main", function () {
+  describe("maxProfit", function () {
+    it("should return true for max profit", function () {
+      const value = main.maxProfit([
+        80.49, 30.2, 15.15, 10.9, 71.6, 8.46, 25.95, 50.25,
+      ]);
+      assert.equal(value, [0, 6]);
     });
   });
 });
