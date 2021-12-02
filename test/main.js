@@ -37,7 +37,7 @@ describe("main", function () {
       const value = main.maxProfit([
         80.49, 30.2, 15.15, 10.9, 71.6, 8.46, 25.95, 50.25,
       ]);
-      assert.equal(value, [0, 6]);
+      assert.deepStrictEqual(value, [3, 4]);
     });
   });
 });

@@ -31,27 +31,30 @@ function getPrimeNumbers(n) {
 exports.getPrimeNumbers = getPrimeNumbers;
 */
 
+//   80.49, 30.2, 15.15, 10.9, 71.6, 8.46, 25.95, 50.25,
+// i is the day we're on
+// j is the day we're comparing it to
+
 function maxProfit(prices) {
-  const profit = 0;
-  let buyPrice = 0;
-  let sellPrice = 0;
+  let buyIndex = 0;
+  let sellIndex = 0;
+  let highestMargin = 0;
+
   for (let i = 0; i < prices.length; i++) {
-    for (let j = 0; j < i.length; j++)
-      //   // if (buyPrice > prices[i]) {
-      //   //   buyPrice = prices[i];
-      //   //   prices[i] = 0;
-      //   // } else {
-      //   //   profit = Math.max(prices[i] - buyPrice, profit);
-      //   // }
-      //   for (let i = 0; i < prices.length; i++) {
-      //     if (sellPrice < prices[i]) {
-      //       sellPrice = prices[i];
-      //       prices[i] = 0;
-      //     } else {
-      //       profit = Math.max(prices[i] - sellPrice, profit);
-      //     }
-      // }
-      return true;
+    for (let j = 0; j < prices.length; j++) {
+      const dayPrice = prices[i];
+      const comparedPrice = prices[j];
+      const difference = comparedPrice - dayPrice;
+      const isDifferenceHigher = difference > highestMargin;
+
+      if (i < j && isDifferenceHigher) {
+        buyIndex = i;
+        sellIndex = j;
+        highestMargin = difference;
+      }
+    }
   }
+
+  return [buyIndex, sellIndex];
 }
 exports.maxProfit = maxProfit;
